@@ -1,71 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+div.ctn {
+  display: flex;
+  flex-direction: column;
+  width: 1529.5px;
+  height: 889px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #4e4e4e;
+
+  h1 {
+    font-size: 53px;
+  }
+
+  div.btn-ctn {
+    height: 50%;
+    a.start {
+      text-decoration: none;
+      color: white;
+      font-size: 45px;
+    }
+  }
 }
 
 div.container {
-    position: relative;
-    width: fit-content;
+  position: relative;
+  width: fit-content;
 
-    div.stats {
+  div.stats {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    div.health {
+      position: relative;
+
+      div#player1Health {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        div.health {
-            position: relative;
-
-            div#player1Health {
-                position: absolute;
-                right: 0;
-                height: 30px;
-                width: 0px;
-                background-color: orange;
-                transition: 0.2s;
-            }
-
-            div#player2Health {
-                position: absolute;
-                left: 0;
-                height: 30px;
-                width: 0px;
-                background-color: pink;
-                transition: 0.2s;
-            }
-
-            div.health-bar {
-                background-color: whitesmoke;
-                height: 30px;
-                width: 300px;
-            }
-        }
-
-        div.timer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: gray;
-            height: 70px;
-            width: 70px;
-            border-radius: 25px;
-        }
-    }
-
-    div#displayText {
-        position: absolute;
-        color: white;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        bottom: 0;
-        left: 0;
         right: 0;
-        display: none;
-        font-size: 25px;
+        height: 30px;
+        width: 0px;
+        background-color: orange;
+        transition: 0.2s;
+      }
+
+      div#player2Health {
+        position: absolute;
+        left: 0;
+        height: 30px;
+        width: 0px;
+        background-color: pink;
+        transition: 0.2s;
+      }
+
+      div.health-bar {
+        background-color: whitesmoke;
+        height: 30px;
+        width: 300px;
+      }
     }
+
+    div.timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: gray;
+      height: 70px;
+      width: 70px;
+      border-radius: 25px;
+    }
+  }
+
+  div#displayText {
+    position: absolute;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    font-size: 25px;
+  }
 }

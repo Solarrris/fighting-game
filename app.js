@@ -239,13 +239,22 @@ window.addEventListener("keyup", (event) => {
   }
 });
 
+function delayAttack(player) {
+  setTimeout(() => {
+    player.attack();
+    setTimeout(() => {
+      player.isAttacking = false;
+    }, 50);
+  }, 300);
+}
+
 window.addEventListener("mousedown", () => {
   if (player1.canAttack) {
-    player1.attack();
     player1.framesElapsed = 0;
     player1.framesCurrent = 0;
     player1.framesMax = 3;
     player1.image.src = "./img/Player1-attack.png";
+    delayAttack(player1);
     setTimeout(() => {
       player1.framesElapsed = 0;
       player1.framesCurrent = 0;
